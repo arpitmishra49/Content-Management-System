@@ -100,6 +100,8 @@ import {
   // //cookies version  
   
   
+  
+  
   export const login = async (req, res) => {
     try {
       const { email, password } = req.body;
@@ -108,7 +110,7 @@ import {
   
       res.cookie("token", result.token, {
         httpOnly: true,
-        secure: false, // true in production (HTTPS)
+        secure: false,
         sameSite: "lax",
         maxAge: 60 * 60 * 1000 // 1 hour
       });
