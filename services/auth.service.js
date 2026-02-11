@@ -3,7 +3,7 @@ import User from "../models/users.js";
 import OTP from "../models/otp.js";
 
 import jwt from "jsonwebtoken";
-import { generateOTP } from "../utils/generateotp.js";
+import { generateOTP } from "../utils/generateOtp.js";
 /**
  * Initiate signup by generating OTP
  */
