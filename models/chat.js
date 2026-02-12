@@ -16,8 +16,13 @@ const chatSchema = new mongoose.Schema(
             type:String,
             required:true,
             trim:true
+        },
+
+        isRead:{
+            type: Boolean,
+            default:false
         }
     },
     {timestamps:true}
 );
-export default mongoose.model("chat",chatSchema);
+export default mongoose.model("Chat",chatSchema);

@@ -7,6 +7,7 @@ import artifactRoutes from "./routes/artifacts.route.js"
 import comment from "./routes/comment.route.js";
 import cookieParser from "cookie-parser";
 import webhookRoutes from "./webhook/webhook.js"
+import chatRoutes from "./routes/chats.route.js";
 const app = express();
 
 /* Middlewares */
@@ -25,7 +26,7 @@ app.get("/", (req, res) => {
     message: "CMS Backend is running"
   });
 });
-
+app.use("/chat",chatRoutes);
 app.use("/webhook",webhookRoutes);
 app.use("/auth",authRoutes);
 app.use("/artifacts", artifactRoutes);
