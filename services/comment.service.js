@@ -16,6 +16,8 @@ export const addCommentService = async ({
   });
 };
 
+
+
 export const getCommentsService = async (artifactId) => {
   return await Comment.find({ artifact: artifactId })
     .populate("user", "name")

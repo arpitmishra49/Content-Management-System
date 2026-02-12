@@ -6,6 +6,8 @@ export const toggleLikeService = async ({ artifactId, userId }) => {
     user: userId
   });
 
+  
+
   if (existingLike) {
     await Like.deleteOne({ _id: existingLike._id });
     return { liked: false };
@@ -18,6 +20,8 @@ export const toggleLikeService = async ({ artifactId, userId }) => {
 
   return { liked: true };
 };
+
+
 
 
 
