@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use("/webhooks",webhookRoutes);
+app.use("/webhook",webhookRoutes);
 app.use("/auth",authRoutes);
 app.use("/artifacts", artifactRoutes);
 // app.use("/likes", likes);
